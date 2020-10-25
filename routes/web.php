@@ -38,6 +38,7 @@ Route::get('/updateorder/{$order_id}', [Orders::class, 'updateOrder'])->name('up
 Route::post('/storeorder', [Orders::class, 'storeOrder'])->name('storeorder');
 
 Route::get('/deliveries', [Deliveries::class, 'index'])->name('deliveries');
+Route::get('/viewdelivery/{$id}', [Deliveries::class, 'viewDelivery'])->name('viewdelivery');
 Route::get('/adddelivery', [Deliveries::class, 'addDelivery'])->name('adddelivery');
 Route::get('/delivery/{$id}', [Deliveries::class, 'viewDelivery'])->name('viewdelivery');
 Route::post('/storedelivery', [Deliveries::class, 'storeDelivery'])->name('storedelivery');
